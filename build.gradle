@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.tendies.train'
+version '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    scalaVersion = "2.12"
+    akkaVersion = "2.6.13"
+    akkaHttpVersion = "10.2.4"
+}
+
+dependencies {
+    compile "com.typesafe.akka:akka-http_${scalaVersion}:${akkaHttpVersion}"
+    compile "com.typesafe.akka:akka-actor_${scalaVersion}:${akkaVersion}"
+    compile "com.typesafe.akka:akka-stream_${scalaVersion}:${akkaVersion}"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+
+dependencies {
+
+}
